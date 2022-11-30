@@ -10,13 +10,13 @@ export default function BottomTabNavigator() {
     return (
       <bottomTab.Navigator initialRouteName="HomeScreen">
         <bottomTab.Screen name="홈" component={HomeScreen} 
-          options={{tabBarIcon: ({color,size}) => (<FontAwesome name="home" size={size} color={color} /> )}}
+          options={{title:"TumblA", tabBarIcon: ({color,size}) => (<FontAwesome name="home" size={size} color={color} /> )}}
         />
         <bottomTab.Screen name="요청하기" component={RequestScreen} 
-           options={{tabBarIcon: ({color,size}) => (<Entypo name="bell" size={size} color={color} /> )}}
+           options={{title:"TumblA", tabBarIcon: ({color,size}) => (<Entypo name="bell" size={size} color={color} /> )}}
         />
         <bottomTab.Screen name="설정" component={EditScreen} 
-           options={{tabBarIcon: ({color,size}) => (<Entypo name="list" size={size} color={color} /> )}}
+           options={{title:"TumblA", tabBarIcon: ({color,size}) => (<Entypo name="list" size={size} color={color} /> )}}
         />
       </bottomTab.Navigator>
     );
