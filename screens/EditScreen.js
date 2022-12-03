@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+// import QrcodeScanner from '../components/QrcodeScanner';
 
 export default function EditScreen() {
     return (
