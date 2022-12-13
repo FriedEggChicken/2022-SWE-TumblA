@@ -1,13 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import { Box, Stack,Badge } from '@react-native-material/core';
+import axios from 'axios';
+
 // import QrcodeScanner from '../components/QrcodeScanner';
 // 스크린으로 사용된 컴포넌트 navigation 객체를 props로 받아옴.
 
 export default function HomeScreen({ navigation }) {
   const [fill, setFill] = useState(70);
+
+  // useEffect (() => {
+  //   axios.get('http://3.34.19.237:3000/api/tumbler',{
+
+  // }).then((res) => {
+  //     console.log(res)
+  //     if(res.status === 200){
+  //         setFill(res.data.tumblerNum)
+  //     }
+  //     else{
+  //       alert('에러')
+  //     }
+  // }).catch((err) => {
+  //     console.log(err)
+  // })
+  // })
 
   const onClick = () => {
     console.log("qr")

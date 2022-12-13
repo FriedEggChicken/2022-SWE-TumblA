@@ -13,7 +13,23 @@ export default function RequestScreen({ navigation }) {
 
   const [requestText, setRequestText] = useState('');
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
+  //   await axios.post('http://3.34.19.237:3000/api/request',{
+  //     brokenT: broke,
+  //     addT: add,
+  //     reqText: requestText
+  // }).then((res) => {
+  //     console.log(res)
+  //     if(res.status === 200){
+  //         alert(`요청 하였습니다.`)
+  //     }
+  //     else{
+  //       alert('요청 에러')
+  //     }
+  // }).catch((err) => {
+  //     console.log(err)
+  // })
+
     console.log(broke)
     console.log(typeof (broke))
     console.log(typeof (add))
