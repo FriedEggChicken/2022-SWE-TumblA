@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
   // })
   // })
 
-  const onClick = () => {
+  const onClick = async () => {
     console.log("qr")
     navigation.navigate('QR')
   }

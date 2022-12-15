@@ -25,24 +25,34 @@ export default function QrcodeScanner() {
         
         // alert(`반납완료 ${type} , 데이터 ${data}`)
         await axios.post('http://3.34.19.237:3000/api/return',{
-            tumblerId: 1,
+            tumblerId: data,
             
         }).then((res) => {
             console.log(res)
             // alert(`반납완료 ${type} , 데이터 ${data}`)
             if(res.status === 200){
-                alert(`1번 텀블러 반납완료`)
+                alert(`${data}번 텀블러 반납완료`)
             }
             else if(res.status === 400){
                 alert('대여 중인 텀블러가 아닙니다')
             }
             else if(res.status === 403){
-                alert(`반납 기한이 넘었습니다! 반납 완료 ${data}`)
+                alert(`반납 기한이 넘었습니다! ${data}번 텀블러 반납 완료`)
             }
         }).catch((err) => {
             console.log(err)
         })
     }
+
+    // const test_api = async ({type,data}) => {
+    //     setScanned(true);
+    //     const response = await fetch('http://3.34.19.237:3000/api/return',{method:'POST'});
+    //     console.log('hello')
+    //     if (response.status === 200){
+    //         alert(`1번 텀블러 반납완료 데이터 ${data}`)
+    //         console.log(response)
+    //     }
+    // }
 
     if (hasPermmision === null) {
         return <Text>카메라 접근 허용 요청</Text>
